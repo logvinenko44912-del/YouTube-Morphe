@@ -2,13 +2,18 @@ name: CI
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 */1 * * *"
 
 jobs:
   check:
     permissions: write-all
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
+      - uses: actions/setup-java@v5
+        with:
+          distribution: "zulu"
+          java-version: "21"
+
       - name: Checkout
         uses: actions/checkout@v6
         with:
