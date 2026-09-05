@@ -1,10 +1,8 @@
-Music: 8.40.54  
-YouTube: 20.40.45  
+YouTube-Morphe: 21.07.247  
 
-Install [MicroG](https://github.com/ReVanced/GmsCore/releases) to be able to use non-root YouTube or YouTube-Music.  
-Use [zygisk-detach](https://github.com/j-hc/zygisk-detach) to block Play Store from updating YouTube and YouTube-Music.  
-
-[Main Repo](https://github.com/NoName-exe/revanced-mnml)  
-CLI: ReVanced/revanced-cli-6.0.0-all.jar  
-Patches: ReVanced/patches-6.1.0.rvp  
-[Changelog](https://github.com/ReVanced/revanced-patches/releases/tag/v6.1.0)  
+Install [Morphe MicroG-RE](https://github.com/MorpheApp/MicroG-RE/releases/latest) for non-root YouTube, YouTube Music and Reddit APKs  
+Use [zygisk-detach](https://github.com/j-hc/zygisk-detach/releases/latest) to detach YouTube and YouTube Music modules from the Play Store
+  
+CLI: MorpheApp/morphe-desktop-1.15.0-all.jar  
+Patches: MorpheApp/patches-1.41.0.mpp  
+[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.41.0)  
