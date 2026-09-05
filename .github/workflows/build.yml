@@ -67,9 +67,9 @@ jobs:
           TAG: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
           BODY: ${{ steps.get_output.outputs.BUILD_LOG }}
         run: |
-          rel_title=$(find build -maxdepth 1 -name "youtube-revanced-mnml-module-*.zip" -printf '%P\n')
+          rel_title="YouTube Morphe"
           if gh release view "$TAG" >/dev/null 2>&1; then
-            gh release edit "$TAG" --title "ReVanced MNML" --notes "$BODY"
+            gh release edit "$TAG" --title "$rel_title" --notes "$BODY"
             gh release upload "$TAG" ./build/* --clobber
           else
             gh release create "$TAG" ./build/* --title "$rel_title" --notes "$BODY"
