@@ -1,41 +1,14 @@
-enable-module-update = true # set this to false if you do not want to receive updates for the module
+enable-module-update = true
 parallel-jobs = 1
-rv-brand = "ReVanced MNML"
 
-# add 'enabled = false' for not patching a specific app or remove it from the config
-# see https://github.com/j-hc/revanced-magisk-module/blob/main/CONFIG.md for more detailed explanations
-
-# you can use rvmm-config-gen to generate a config
-
-[YouTube]
-build-mode = "both"                                                   
-excluded-patches = "'Seekbar tapping' 'Always autorepeat' 'Enable debugging' 'Client spoof' 'Hide filter bar' 'Hide endscreen cards' 'Hide album cards' 'Hide seekbar' 'Hide cast button' 'Enable tablet layout' 'Premium heading' 'Spoof app version' 'Alternative thumbnails'"
-included-patches = "'Remove player controls background'"
-version = "auto"
+# Morphe
+[YouTube-Morphe]
+app-name = "YouTube"
+direct-dlurl = "https://github.com/peternmuller/YTYTM-APK/releases/download/1/com.google.android.youtube-21.07.247-all.apk"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
-module-prop-name = "yt-rv-mnml"
-
-[Music]
-build-mode = "both"
-app-name = "YouTube-Music"
-excluded-patches = ""
-included-patches = "'Permanent repeat' 'Permanent shuffle'"
-version = "auto"
-archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music/"
-module-prop-name = "ytm-rv-mnml"
-arch = "arm64-v8a"
-
-[Photos]
-version = "latest"
-dpi = "nodpi"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/photos/"
-excluded-patches = "'Restore hidden 'Back up while charging' toggle'"
-archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.photos"
-arch = "arm64-v8a"
-
-[Infinity]
-apkmirror-dlurl = "https://www.apkmirror.com/apk/docile-alligator/infinity-for-reddit/"
-patcher-args = "-e 'Spoof client' -Oclient-id='$(echo $RDT_API)'"
-dpi = "nodpi"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+patches-source = "MorpheApp/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+rv-brand = "Morphe"
+build-mode = "apk"
