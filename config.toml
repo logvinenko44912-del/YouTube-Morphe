@@ -1,22 +1,95 @@
-enable-magisk-update = false # set this to false if you do not want to receive updates for the module in magisk app
-parallel-jobs = 1
+enable-module-update = true
+parallel-jobs = 4
+enable-update-checks = true
 
-# add 'enabled = false' for not patching a specific app or remove it from the config
-# see https://github.com/j-hc/revanced-magisk-module/blob/main/CONFIG.md for more detailed explanations
-
-# you can use rvmm-config-gen to generate a config
-
-[Music]
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
-excluded-patches = "'Custom branding'"
-
-[Tiktok]
-apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
-
-[Twitter]
-apkmirror-dlurl = "https://apkmirror.com/apk/twitter-inc/twitter/"
-
-[YouTube]
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
-excluded-patches = "'Custom branding'"
-
+[YouTube-Morphe]
+enabled = true
+app-name = "YouTube"
+patches-source = "MorpheApp/morphe-patches"
+cli-source = "MorpheApp/morphe-cli"
+rv-brand = "Morphe"
+build-mode = "apk"
+version = "auto"
+exclusive-patches = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
+included-patches = """
+    'Add to queue' \
+    'Alternative thumbnails' \
+    'Ambient mode' \
+    'App refresh rate' \
+    'Bypass image region restrictions' \
+    'Bypass link redirects' \
+    'Captions' \
+    'Change form factor' \
+    'Change header' \
+    'Change start page' \
+    'Check watch history domain name resolution' \
+    'Copy video link' \
+    'Custom player overlay opacity' \
+    'Disable BRC audio' \
+    'Disable QUIC protocol' \
+    'Disable Shorts resuming on startup' \
+    'Disable double tap actions' \
+    'Disable fullscreen gestures' \
+    'Disable haptic feedback' \
+    'Disable layout updates' \
+    'Disable player popup panels' \
+    'Disable playlist autoplay' \
+    'Disable rolling number animations' \
+    'Disable scrolling speed limit' \
+    'Disable sign in to TV popup' \
+    'Disable video codecs' \
+    'Double tap to seek' \
+    'Downloads' \
+    'Enable debugging' \
+    'Exit fullscreen mode' \
+    'Force original audio' \
+    'Fullscreen video scale' \
+    'Hide Shorts components' \
+    'Hide ads' \
+    'Hide autoplay preview' \
+    'Hide end screen cards' \
+    'Hide end screen suggested video' \
+    'Hide info cards' \
+    'Hide layout components' \
+    'Hide player flyout menu components' \
+    'Hide player overlay buttons' \
+    'Hide related video overlay' \
+    'Hide related videos' \
+    'Hide timestamp' \
+    'Hide video action buttons' \
+    'Loop video' \
+    'Media notification controls' \
+    'Miniplayer' \
+    'Mute button' \
+    'Navigation bar' \
+    'Open Shorts in regular player' \
+    'Open channel of live avatar' \
+    'Open links externally' \
+    'Open system share sheet' \
+    'Open videos fullscreen' \
+    'Override YouTube Music buttons' \
+    'Play all' \
+    'Playback in feeds' \
+    'Playback speed' \
+    'Reload video' \
+    'Remember live stream playback position' \
+    'Remove background playback restrictions' \
+    'Remove viewer discretion dialog' \
+    'Return YouTube Dislike' \
+    'Sanitize sharing links' \
+    'Save to Watch later' \
+    'Seekbar' \
+    'Settings menu filter' \
+    'Shorts autoplay' \
+    'SponsorBlock' \
+    'Spoof app version' \
+    'Spoof device dimensions' \
+    'Spoof video streams' \
+    'Swipe controls' \
+    'Theme' \
+    'Video quality' \
+    'Voice over translation' \
+    'Wide search bar'
+"""
